@@ -11,3 +11,9 @@ C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\ExercicioJogo\Ex
 C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\bin\Debug\ExercicioJogo.exe.config
 C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\bin\Debug\ExercicioJogo.exe
 C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\bin\Debug\ExercicioJogo.pdb
+C:\Users\00112908\Desktop\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\obj\Debug\ExercicioJogo.csprojAssemblyReference.cache
+C:\Users\00112908\Desktop\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\obj\Debug\ExercicioJogo.exe
+C:\Users\00112908\Desktop\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\obj\Debug\ExercicioJogo.pdb
+C:\Users\00112908\Desktop\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\bin\Debug\ExercicioJogo.exe.config
+C:\Users\00112908\Desktop\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\bin\Debug\ExercicioJogo.exe
+C:\Users\00112908\Desktop\ExercicioJogoVisualStudio-main\ExercicioJogo\ExercicioJogo\bin\Debug\ExercicioJogo.pdb

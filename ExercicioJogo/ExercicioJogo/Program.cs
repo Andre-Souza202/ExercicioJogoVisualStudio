@@ -17,6 +17,10 @@ namespace ExercicioJogo
 		public int posicao { get; set; }
         public int pocVida { get; set; }
         public int pocPrecisao { get; set; }
+
+        public int coragem { get; set; }
+        public int furtividade { get; set; }
+        public int vontade { get; set; }
     }
 
     class Inimigo
@@ -35,10 +39,132 @@ namespace ExercicioJogo
         static void Main(string[] args)
         {
             Jogador jogador = new Jogador();
-            infoJogador(jogador);
+            jogador.vidaAtual = 12;
+            jogador.dano = 2;
+            jogador.precisao = 7;
+
+            Historia(jogador, 1);
 
             Lutar(jogador, 1);
-            Lutar(jogador, 2);
+
+            Historia(jogador, 2);
+
+            //infoJogador(jogador);
+        }
+
+        static void Historia(Jogador jogador, int sequencia)
+        {
+            int opc;
+            bool continuar = false;
+
+            switch(sequencia)
+            {
+                case 1:
+                    do
+                    {
+                        continuar = true;
+                        Console.Clear();
+                        Console.WriteLine(" Você acorda, ouvindo gritos do lado de fora");
+                        Console.WriteLine(" Se levantando, você vai até a porta e a abre levemente");
+                        Console.WriteLine(" Olhando cuidadosamente, você vê um grupo de esqueletos morto-vivos");
+                        Console.WriteLine(" Rapidamente você fecha a porta e se afasta");
+                        Console.WriteLine(" Esqueletos morto-vivos... são criaturas malignas, você precisa sair da vila ou eles vão te encontrar");
+                        Console.WriteLine(" De repente começam a bater na sua porta, batidas fortes, ela vai ser derrubada em breve");
+                        Console.WriteLine("");
+                        Console.WriteLine("(1) Emboscar");
+                        Console.WriteLine("(2) Se esconder");
+                        Console.WriteLine("(3) Fortificar porta");
+                        int.TryParse(Console.ReadLine(), out opc);
+                        switch(opc)
+                        {
+                            case 1:
+                                Console.WriteLine(" Você rapidamente pega uma faca e se posiciona ao lado da porta");
+                                Console.ReadKey();
+                                Console.Clear();
+                                Console.WriteLine(" A porta... cai, um ser formado apenas por um esqueleto entra");
+                                Console.WriteLine(" Você estava preparado e ataca a criatura com sua faca");
+                                Console.WriteLine(" O dano causado é minimo, mas é o suficiente para te dar a oportunidade de correr");
+                                Console.WriteLine(" Você corre em direção para fora da vila");
+                                Console.WriteLine("");
+                                Console.WriteLine(" Coragem +");
+                                Console.WriteLine(" Furtividade -");
+                                jogador.coragem++;
+                                jogador.furtividade--;
+                                break;
+
+                            case 2:
+                                Console.WriteLine(" Você se esconde em baixo da cama, fingindo que não ah ninguem em casa");
+                                Console.ReadKey();
+                                Console.Clear();
+                                Console.WriteLine(" A porta... cai, um ser formado apenas por um esqueleto entra");
+                                Console.WriteLine(" Você está escondido, e torce para que a criatura não te encontre");
+                                Console.WriteLine(" A criatura anda pela casa, até que chega ao seu quarto, olhando em volta, mas não encontra nada");
+                                Console.WriteLine(" A criatura sai de sua casa, mas é muito perigoso continuar aqui");
+                                Console.WriteLine(" Você sai de seu esconderijo, e de sua casa, indo em direção para sair da vila");
+                                Console.WriteLine("");
+                                Console.WriteLine(" Coragem -");
+                                Console.WriteLine(" Furtividade +");
+                                jogador.coragem--;
+                                jogador.furtividade++;
+                                break;
+
+                            case 3:
+                                Console.WriteLine(" Usando tudo que você pode encontrar, você bloqueou a porta");
+                                Console.ReadKey();
+                                Console.Clear();
+                                Console.WriteLine(" A porta... permanece intacta, quem quer que seja que estava batendo parou");
+                                Console.WriteLine(" Você ouve murmurios indecifraveis e logo em seguida passos, se afastando da porta");
+                                Console.WriteLine(" Ele provavelmente vai chamar reforços, você desfaz toda a barricada e sai, antes que ele volte");
+                                Console.WriteLine("");
+                                Console.WriteLine(" Vontade +");
+                                jogador.vontade++;
+                                break;
+
+                            default:
+                                Console.WriteLine(" Escolha uma opção valida");
+                                continuar = false;
+                                break;
+                        }
+                        Console.ReadKey();
+                    } while(continuar == false);
+
+                     continuar = true;
+                     Console.Clear();
+                     Console.WriteLine(" Você continua seguindo para fora da vila, consegue ver a floresta, está quase la");
+                     Console.WriteLine(" Mas logo em frente na direção da floresta, você vê um dos esqueletos, com uma espada infincada em uma pessoa");
+                     Console.WriteLine(" Ele termina sua vitima e se vira, olhando diretamente para você");
+                     Console.WriteLine(" Você corre para outra direção, com o inimigo na sua cola, ele está determinado a te pegar");
+                     Console.WriteLine(" Com o caos que está acontecendo, você se encontra em um caminho sem saida, se virando, o esqueleto andando lentamente até você");
+                     Console.WriteLine(" Alguém te chama, você olha em volta, é o ferreiro da vila, segurando uma porta aberta te chamando para entrar correndo");
+                     Console.WriteLine(" Logo quando você entra e o ferreiro vai fechar a porta, a espada do esqueleto atinge o ferreiro, causando graves ferimentos");
+                     Console.WriteLine(" O esqueleto vai em sua direção, você pega uma espada que estava em uma das estandes");
+                     Console.ReadKey();
+                     jogador.posicao = 4;
+                    break;
+
+                case 2:
+                    Console.Clear();
+                    Console.WriteLine(" O esqueleto cai, seu corpo levemente brilha, e logo em seguida desaparece em pó");
+                    Console.WriteLine(" Você se vira ao ferreiro machucado no chão, vai até ele e o ajuda a levantar, levando até um lugar onde ele possa deitar");
+                    Console.WriteLine(" Ele te aponta onde encontrar as ervas de vida, e você as busca");
+                    Console.WriteLine(" Ferreiro - Obrigado, qual o seu nome?");
+                    jogador.nome = Console.ReadLine();
+                    Console.WriteLine(" Ferreiro Gary - O meu é Gary, você se da bem com espadas pelo que vi ali atrás, não é " + jogador.nome + "?");
+                    Console.WriteLine(" Você responde com uma leve mechida de cabeça, lembrando de seu passado");
+                    Console.WriteLine("");
+                    Console.WriteLine("(1) Eu Fazia parte da guarda real, tenho treinamento com espada, mas isso já faz muito tempo");
+                    Console.WriteLine("(Precisão: Alta || Velocidade: Baixa || Dano: Médio || Defesa: Alta)");
+                    Console.WriteLine("");
+                    Console.WriteLine("(2) Eu era usado por um grupo de ladrões que roubavam caravanas quando eu era um adolescente, mas fugi quando tive uma oportunidade");
+                    Console.WriteLine("(Precisão: Média || Velocidade: Alta || Dano: Alto) || Defesa: Baixa");
+                    Console.WriteLine("");
+                    Console.WriteLine("(3) Meu pai me ensinou, ele era muito bom nisso, sinto saudades dele");
+                    Console.WriteLine("(Precisão: Média || Velocidade: Média || Dano: Médio) || Defesa: Média");
+                    Console.WriteLine("");
+
+                    break;
+                }
+            
         }
 
         static void Lutar(Jogador jogador, int tipoInimigo)
@@ -51,7 +177,6 @@ namespace ExercicioJogo
             infoInimigo(inimigo);
 
             Console.Clear();
-            jogador.posicao = 1;
 
             do
             {
@@ -101,11 +226,11 @@ namespace ExercicioJogo
                                     Random rand2 = new Random();
                                     dano = rand2.Next(1, 4) + jogador.dano;
                                     inimigo.vida = inimigo.vida - dano;
-                                    Console.WriteLine(" " + jogador.nome + " você acertou ele em cheio causando " + dano + " de dano! vida do inimigo restante: " + inimigo.vida);
+                                    Console.WriteLine(" Você acertou ele em cheio causando " + dano + " de dano! vida do inimigo restante: " + inimigo.vida);
                                 }
                                 else
                                 {
-                                    Console.WriteLine(" " + jogador.nome + " o inimigo desvia do seu ataque, você não causou nenhum dano");
+                                    Console.WriteLine(" O inimigo desvia do seu ataque, você não causou nenhum dano");
                                 }
 
                                 continuar = true;
@@ -131,7 +256,7 @@ namespace ExercicioJogo
                                     {
                                         jogador.pocVida--;
                                         jogador.vidaAtual = jogador.vidaAtual + 5;
-                                        Console.WriteLine(" " + jogador.nome + "você toma uma poção de vida e se sente revigorado + 5 vida, sua vida agora é " + jogador.vidaAtual);
+                                        Console.WriteLine(" Você toma uma poção de vida e se sente revigorado + 5 vida, sua vida agora é " + jogador.vidaAtual);
                                         continuar = true;
                                     }
                                     break;
@@ -141,7 +266,7 @@ namespace ExercicioJogo
                                     {
                                         jogador.pocPrecisao--;
                                         jogador.precisao = jogador.precisao + 3;
-                                        Console.WriteLine(" " + jogador.nome + " você toma uma poção de precisão e se sente mais focado, sua precisão aumentou");
+                                        Console.WriteLine(" Você toma uma poção de precisão e se sente mais focado, sua precisão aumentou");
                                         continuar = true;
                                     }
                                     break;
@@ -167,34 +292,33 @@ namespace ExercicioJogo
                 //Ação do inimigo
                 Random rand3 = new Random();
                 int acertou2 = rand3.Next(1, 11);
-
-                if(acertou2 <= inimigo.precisao)
+                if(inimigo.vida > 0)
                 {
-                    Random rand4 = new Random();
-                    dano = rand4.Next(inimigo.danoMin, inimigo.danoMax + 1);
-                    jogador.vidaAtual = jogador.vidaAtual - dano;
-                    Console.WriteLine(" " + jogador.nome + " o inimigo te acertou, causando " + dano + " de dano, você agora está com " + jogador.vidaAtual + " de vida");
+                    if(acertou2 <= inimigo.precisao )
+                    {
+                        Random rand4 = new Random();
+                        dano = rand4.Next(inimigo.danoMin, inimigo.danoMax + 1);
+                        jogador.vidaAtual = jogador.vidaAtual - dano;
+                        Console.WriteLine(" O inimigo te acertou, causando " + dano + " de dano, você agora está com " + jogador.vidaAtual + " de vida");
+                    }
+                    else
+                    {
+                        Console.WriteLine(" Você consegue desviar do ataque do inimigo, não recebendo nenhum dano!");
+                    }
+                
+                    Console.ReadKey();
                 }
-                else
-                {
-                    Console.WriteLine(" " + jogador.nome + " você consegue desviar do ataque do inimigo, não recebendo nenhum dano!");
-                }
-                Console.ReadKey();
-
             } while (inimigo.vida > 0 && jogador.vidaAtual > 0);
 
             Console.WriteLine("");
             if(jogador.vidaAtual <= 0 && inimigo.vida > 0)
             {
-                Console.WriteLine(" " + jogador.nome + " você sucumbiu aos seus ferimentos, sua visão escurece e sua aventura acaba aqui");
+                Console.WriteLine(" Você sucumbiu aos seus ferimentos, sua visão escurece e sua aventura acaba aqui");
             }
             else if(jogador.vidaAtual > 0 && inimigo.vida <= 0)
             {
-                Console.WriteLine(" " + jogador.nome + " com um golpe de espada poderoso o inimigio é derrubado, o resultado é claro, o oponente foi derrotado, você agora pode continuar sua aventura");
-            }
-            else
-            {
-                Console.WriteLine(" " + jogador.nome + " com um golpe de espada poderoso o inimigo é derrubado, mas você está muito ferido, sua visão escurece e sua aventura acaba aqui");
+                Console.WriteLine(" Com um golpe de espada poderoso o inimigio é derrubado, o resultado é claro, o oponente foi derrotado");
+                Console.WriteLine(" Você agora pode continuar sua aventura");
             }
             Console.ReadKey();
         }
@@ -204,10 +328,10 @@ namespace ExercicioJogo
             switch(inimigo.tipo)
             {
                 case 1:
-                    inimigo.vida = 14;
-                    inimigo.danoMin = 2;
-                    inimigo.danoMax = 5;
-                    inimigo.precisao = 7;
+                    inimigo.vida = 8;
+                    inimigo.danoMin = 1;
+                    inimigo.danoMax = 3;
+                    inimigo.precisao = 6;
                     inimigo.posicao = 5;
                     break;
 
@@ -226,18 +350,9 @@ namespace ExercicioJogo
             switch(tipoInimigo)
             {
                 case 1:
-                    if (jogador.classe == 1)
-                    {
-                        Console.WriteLine(" Montado em seu cavalo você segue por um caminho estreito pela montanha, até que a frente você vê uma pilha de ossos, quando você começa a se aproximar a pilha de ossos " +
-                        "começam a flutuar e formam um esqueleto do mau! você precisa derrota-lo se quiser continuar seu caminho");
-                        Console.WriteLine("");
-                    }
-                    else if (jogador.classe == 2)
-                    {
-                        Console.WriteLine(" Andando por um caminho estreito pela montanha com sua confiante espada, você se depara a frente com uma pilha de ossos, quando você começa a se aproximar a pilha de ossos " +
-                        "começam a flutuar e formam um esqueleto do mau! você precisa derrota-lo se quiser continuar seu caminho");
-                        Console.WriteLine("");
-                    }
+                    Console.WriteLine("Em uma vila sendo destruida, você enpunha uma espada contra um esqueleto");
+                    Console.WriteLine("O ferreiro machucado, e um sonho ainda não realizado");
+                    Console.WriteLine("Acabe com ele, ou ele acaba com você");
                     break;
 
                 case 2:
@@ -339,9 +454,6 @@ namespace ExercicioJogo
         static void infoJogador(Jogador jogador)
         {
             bool continuar = false;
-
-            jogador.pocVida = 2;
-            jogador.pocPrecisao = 1;
 
             Console.WriteLine(" Olá aventureiro, qual o seu nome?");
             jogador.nome = Console.ReadLine();
