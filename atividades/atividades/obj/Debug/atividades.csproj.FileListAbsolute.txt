@@ -1,0 +1,13 @@
+C:\Users\00112908\source\repos\atividades\atividades\bin\Debug\atividades.exe.config
+C:\Users\00112908\source\repos\atividades\atividades\bin\Debug\atividades.exe
+C:\Users\00112908\source\repos\atividades\atividades\bin\Debug\atividades.pdb
+C:\Users\00112908\source\repos\atividades\atividades\obj\Debug\atividades.csprojAssemblyReference.cache
+C:\Users\00112908\source\repos\atividades\atividades\obj\Debug\atividades.exe
+C:\Users\00112908\source\repos\atividades\atividades\obj\Debug\atividades.pdb
+C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\atividades\atividades\obj\Debug\atividades.csproj.AssemblyReference.cache
+C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\atividades\atividades\obj\Debug\atividades.csproj.CoreCompileInputs.cache
+C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\atividades\atividades\obj\Debug\atividades.exe
+C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\atividades\atividades\obj\Debug\atividades.pdb
+C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\atividades\atividades\bin\Debug\atividades.exe.config
+C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\atividades\atividades\bin\Debug\atividades.exe
+C:\Users\Night\Desktop\faculdade\ExercicioJogoVisualStudio-main\atividades\atividades\bin\Debug\atividades.pdb
