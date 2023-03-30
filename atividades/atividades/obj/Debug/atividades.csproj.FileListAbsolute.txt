@@ -1,6 +1,0 @@
-C:\Users\00112908\source\repos\atividades\atividades\bin\Debug\atividades.exe.config
-C:\Users\00112908\source\repos\atividades\atividades\bin\Debug\atividades.exe
-C:\Users\00112908\source\repos\atividades\atividades\bin\Debug\atividades.pdb
-C:\Users\00112908\source\repos\atividades\atividades\obj\Debug\atividades.csprojAssemblyReference.cache
-C:\Users\00112908\source\repos\atividades\atividades\obj\Debug\atividades.exe
-C:\Users\00112908\source\repos\atividades\atividades\obj\Debug\atividades.pdb
